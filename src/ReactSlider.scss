@@ -1,0 +1,62 @@
+.sliderBoxContainer {
+  position: relative;
+  margin: 0 auto;
+  .slidesTrackContainer {
+    overflow: hidden;
+    .slidesTrack {
+      padding: 0;
+      clear: both;
+      transition: transform 0.5s;
+      -webkit-transition: transform 0.5s;
+      -moz-transition: transform 0.5s;
+      list-style-type: none;
+      will-change: transform;
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+
+      .slideItem {
+        display: inline-block;
+        float: left;
+        &:first-child {
+          margin-left: 0 !important;
+        }
+        &:last-child {
+          margin-right: 0 !important;
+        }
+      }
+    }
+
+  }
+
+  .leftArrow {
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    cursor: pointer;
+    z-index: 999;
+    font-size: 36px;
+    transform: rotate(-180deg) translate(50%, 50%);
+    .glyphIconPrev {
+      &:before {
+        content: attr(data-icon);
+      }
+    }
+  }
+  .rightArrow {
+    right: -40px;
+    position: absolute;
+    top: 50%;
+    font-size: 36px;
+    color: #666;
+    z-index: 999;
+    cursor: pointer;
+    .glyphIconNext {
+      &:before {
+        content: attr(data-icon);
+      }
+    }
+  }
+  .disableArrow {
+    color: #ddd;
+  }
+}
