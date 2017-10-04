@@ -1,8 +1,8 @@
 {
   "name": "react-es6-slider",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A slider in reactjs",
-  "main": "index.js",
+  "main": "./lib/ReactSlider.js",
   "scripts": {
     "prepublish": "babel ./src --out-dir ./lib",
     "demo:watch": "webpack-dev-server --inline --config webpack.config.js --content-base examples --port 8721"
@@ -21,7 +21,7 @@
   ],
   "author": "Piyush Tiwari",
   "license": "ISC",
-  "dev-dependencies": {
+  "devDependencies": {
     "babel": "^6.0.0",
     "babel-cli": "^6.23.0",
     "babel-core": "^6.5.2",
