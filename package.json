@@ -1,11 +1,11 @@
 {
   "name": "react-es6-slider",
-  "version": "1.0.5",
+  "version": "1.0.9",
   "description": "A slider in reactjs",
   "main": "./lib/ReactSlider.js",
   "scripts": {
     "prepublish": "babel ./src --out-dir ./lib",
-    "demo:watch": "webpack-dev-server --inline --config webpack.config.js --content-base examples --port 8721"
+    "demo:watch": "webpack-dev-server --inline --config webpack.config.js --content-base examples --port 5000"
   },
   "repository": {
     "type": "git",
