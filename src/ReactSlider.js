@@ -28,9 +28,7 @@ class ReactSlider extends Component {
     slidesTrackContainer: PropTypes.string,
     slidesTrackClass: PropTypes.string,
     leftArrowClass: PropTypes.string,
-    leftIcon: PropTypes.string,
     rightArrowClass: PropTypes.string,
-    rightIcon: PropTypes.string,
     disableStateArrowClass: PropTypes.string,
     currentSlideClass: PropTypes.string,
     onLeftArrowClick: PropTypes.func,
@@ -195,7 +193,7 @@ class ReactSlider extends Component {
   }
   render() {
     // Remove null or undefined slides
-    const styles = require('./UCSlider.scss');
+    const styles = require('./ReactSlider.scss');
     const slides = this.props.children.filter(slide => !!slide);
 
     // If no slides return null
@@ -221,13 +219,15 @@ class ReactSlider extends Component {
             onTouchEnd={this.completeDragSlide}>
         {
           !this.state.hideArrows &&
-          <span className={cssNameObj.leftArrow} onClick={this.slideLeft}
-              dangerouslySetInnerHTML={{ __html: `<span class=${styles.glyphIconPrev} data-icon="${this.props.leftIcon || '<'}"></span>` }}/>
+          <span
+            className={cssNameObj.leftArrow}
+            onClick={this.slideLeft} />
         }
         {
           !this.state.hideArrows &&
-          <span className={cssNameObj.rightArrow} onClick={this.slideRight}
-                dangerouslySetInnerHTML={{ __html: `<span class=${styles.glyphIconNext} data-icon="${this.props.rightIcon || '<'}"></span>` }}/>
+          <span
+            className={cssNameObj.rightArrow}
+            onClick={this.slideRight} />
         }
         <div ref={(r) => this._slidesTrackContainerRef = r}
              className={cssNameObj.slidesTrackContainer}>
