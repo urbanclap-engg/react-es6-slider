@@ -1,40 +1,8 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import cx from 'classnames';
 import Constants from './Constants';
 
 class ReactSlider extends Component {
-  static propTypes = {
-    /* Slider Props*/
-    slidesToShow: PropTypes.number,
-    slidesToScroll: PropTypes.number,
-    slideWidth: PropTypes.number,
-    currentSlide: PropTypes.number,
-    gutterSpace: PropTypes.number,
-    children: PropTypes.oneOfType([
-      PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node
-    ]),
-    isMobile: PropTypes.bool,
-    sideDisplayWidth: PropTypes.number,
-    // If true will render the slider after receiving props in componentWillReceiveProps
-    boolRenderLater: PropTypes.bool,
-
-    /* Arrow Props */
-    hideArrows: PropTypes.bool,
-
-    /* Slider CSS Classes */
-    sliderBoxClass: PropTypes.string,
-    slideItemClass: PropTypes.string,
-    slidesTrackContainer: PropTypes.string,
-    slidesTrackClass: PropTypes.string,
-    leftArrowClass: PropTypes.string,
-    rightArrowClass: PropTypes.string,
-    disableStateArrowClass: PropTypes.string,
-    currentSlideClass: PropTypes.string,
-    onLeftArrowClick: PropTypes.func,
-    onRightArrowClick: PropTypes.func,
-    onCurrentIndexChange: PropTypes.func
-  }
   constructor(props) {
     super(props);
     this.GUTTER_SPACE = this.props.gutterSpace !== 'undefined' ? this.props.gutterSpace : Constants.GUTTER_SPACE;

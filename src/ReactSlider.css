@@ -1,0 +1,52 @@
+.sliderBoxContainer {
+    position: relative;
+    margin: 0 auto;
+}
+.sliderBoxContainer .slidesTrackContainer {
+    overflow: hidden;
+}
+.sliderBoxContainer .slidesTrackContainer .slidesTrack {
+    padding: 0;
+    clear: both;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    will-change: transform;
+    margin: 0;
+}
+.sliderBoxContainer .slidesTrackContainer .slidesTrack .slideItem {
+    display: inline-block;
+    float: left;
+}
+.sliderBoxContainer .slidesTrackContainer .slidesTrack .slideItem:first-child {
+    margin-left: 0 !important;
+}
+.sliderBoxContainer .slidesTrackContainer .slidesTrack .slideItem:last-child {
+    margin-right: 0 !important;
+}
+.sliderBoxContainer .leftArrow {
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    cursor: pointer;
+    z-index: 999;
+    font-size: 36px;
+    transform: rotate(-180deg) translate(50%, 50%);
+}
+.sliderBoxContainer .leftArrow .glyphIconPrev:before {
+    content: attr(data-icon);
+}
+.sliderBoxContainer .rightArrow {
+    right: -40px;
+    position: absolute;
+    top: 50%;
+    font-size: 36px;
+    color: #666;
+    z-index: 999;
+    cursor: pointer;
+}
+.sliderBoxContainer .rightArrow .glyphIconNext:before {
+    content: attr(data-icon);
+}
+.sliderBoxContainer .disableArrow {
+    color: #ddd;
+}
