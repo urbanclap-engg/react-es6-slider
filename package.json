@@ -1,6 +1,6 @@
 {
   "name": "react-es6-slider",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "A slider in reactjs",
   "main": "./lib/ReactSlider.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Fyre91/react-es6-slider.git"
+    "url": "https://github.com/urbanclap-engg/react-es6-slider"
   },
   "keywords": [
     "react",
