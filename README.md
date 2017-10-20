@@ -78,7 +78,7 @@ class BasicExample extends Component {
 | rightArrowClass | String| `` | Class to be applied on right arrow |
 | disableStateArrowClass | String | `` | Class to be applied on arrows when disabled |
 | onLeftArrowClick | Function | `` | Function to be called on click of left arrow |
-| onLeftArrowClick | Function | `` | Function to be called on click of right arrow |
+| onRightArrowClick | Function | `` | Function to be called on click of right arrow |
 
 ```
 
