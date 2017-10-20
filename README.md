@@ -10,7 +10,7 @@ React ES6 Slider
 ## Demo Link
 
 https://www.urbanclap.com/
-Just scroll down a bit to see a list of sliders
+Scroll down a bit to see a list of sliders
 
 
 ## Install
