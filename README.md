@@ -7,13 +7,18 @@ React ES6 Slider
 
 <img src="https://cdn.pbrd.co/images/NdP8aaHom.png" width="550"/>
 
+## Demo Link
+
+https://www.urbanclap.com/
+Just scroll down a bit to see a list of sliders
+
 
 ## Install
 
 ```bash
 npm install --save react-es6-slider
 npm run demo:watch
-Open http://localhost:8721/
+Open http://localhost:5000/
 ```
 
 
@@ -79,6 +84,6 @@ class BasicExample extends Component {
 
 ## Example
 
-`npm run demo:watch` and then go to `http://localhost:8721/`
+`npm run demo:watch` and then go to `http://localhost:5000/`
 
 
