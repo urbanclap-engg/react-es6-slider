@@ -42,12 +42,12 @@ class BasicExample extends Component {
     const styles = require('../scss/example.scss');
     const dummyData = [1, 2, 3, 4, 5];
     return (
-      <div className={styles.container}>
+      <div className='container'>
         <ReactSlider {...sliderSettings}>
           {
             dummyData.map((item, index) => {
               return (
-                <div className={styles.sliderItem} key={index}>
+                <div className='sliderItem' key={index}>
                   { item }
                 </div>
               )

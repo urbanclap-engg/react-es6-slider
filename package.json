@@ -1,6 +1,6 @@
 {
   "name": "react-es6-slider",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "description": "A slider in reactjs",
   "main": "./lib/ReactSlider.js",
   "scripts": {

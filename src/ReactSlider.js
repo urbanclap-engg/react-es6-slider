@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import cx from 'classnames';
 import Constants from './Constants';
+import './ReactSlider.css';
 
 class ReactSlider extends Component {
   constructor(props) {
@@ -53,14 +54,14 @@ class ReactSlider extends Component {
       this.props.onCurrentIndexChange(this.state.currentSlide);
     }
   }
-  getClasses = (styles) => {
+  getClasses = () => {
     return {
-      sliderBoxContainer: cx(styles.sliderBoxContainer, !!this.props.sliderBoxClass && this.props.sliderBoxClass),
-      slideItem: cx(styles.slideItem, !!this.props.slideItemClass && this.props.slideItemClass),
-      slidesTrack: cx(styles.slidesTrack, !!this.props.slidesTrackClass && this.props.slidesTrackClass),
-      leftArrow: cx(styles.leftArrow, !!this.props.leftArrowClass && this.props.leftArrowClass, this.state.currentSlide === 0 && cx(styles.disableArrow, this.props.disableStateArrowClass)),
-      rightArrow: cx(styles.rightArrow, !!this.props.rightArrowClass && this.props.rightArrowClass, (this.state.currentSlide === this.state.totalSlides - this.state.slidesToShow || this.state.totalSlides < this.state.slidesToShow) && cx(styles.disableArrow, this.props.disableStateArrowClass)),
-      slidesTrackContainer: cx(styles.slidesTrackContainer, !!this.props.slidesTrackContainer && this.props.slidesTrackContainer)
+      sliderBoxContainer: cx('sliderBoxContainer', !!this.props.sliderBoxClass && this.props.sliderBoxClass),
+      slideItem: cx('slideItem', !!this.props.slideItemClass && this.props.slideItemClass),
+      slidesTrack: cx('slidesTrack', !!this.props.slidesTrackClass && this.props.slidesTrackClass),
+      leftArrow: cx('leftArrow', !!this.props.leftArrowClass && this.props.leftArrowClass, this.state.currentSlide === 0 && cx('disableArrow', this.props.disableStateArrowClass)),
+      rightArrow: cx('rightArrow', !!this.props.rightArrowClass && this.props.rightArrowClass, (this.state.currentSlide === this.state.totalSlides - this.state.slidesToShow || this.state.totalSlides < this.state.slidesToShow) && cx('disableArrow', this.props.disableStateArrowClass)),
+      slidesTrackContainer: cx('slidesTrackContainer', !!this.props.slidesTrackContainer && this.props.slidesTrackContainer)
     };
   }
   initialProcessing = () => {
@@ -161,16 +162,14 @@ class ReactSlider extends Component {
   }
   render() {
     // Remove null or undefined slides
-    const styles = require('./ReactSlider.scss');
     const slides = this.props.children.filter(slide => !!slide);
-
     // If no slides return null
     if (slides.length === 0 || typeof slides === 'undefined' || !slides) {
       return null;
     }
 
     // Get and combine all css classes at one place
-    const cssNameObj = this.getClasses(styles);
+    const cssNameObj = this.getClasses();
 
     const slideStyles = {
       width: this.state.slideWidth + 'px',
